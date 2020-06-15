@@ -24,6 +24,9 @@
 		AF9C275F24956B5600CAB652 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9C275D24956B5600CAB652 /* MyCollectionViewCell.swift */; };
 		AF9C276024956B5600CAB652 /* MyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF9C275E24956B5600CAB652 /* MyCollectionViewCell.xib */; };
 		AFBE192F24963B50000DD5BC /* PhotosDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBE192E24963B50000DD5BC /* PhotosDetailViewController.swift */; };
+		AFBE193124964514000DD5BC /* GitHubUserNameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBE193024964514000DD5BC /* GitHubUserNameProtocol.swift */; };
+		AFBE1933249648DF000DD5BC /* ChangeUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBE1932249648DF000DD5BC /* ChangeUsernameViewController.swift */; };
+		AFBE1935249676E9000DD5BC /* Variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBE1934249676E9000DD5BC /* Variables.swift */; };
 		AFE6F9032494067C00405036 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE6F9022494067C00405036 /* SignInViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +50,9 @@
 		AF9C275D24956B5600CAB652 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		AF9C275E24956B5600CAB652 /* MyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectionViewCell.xib; sourceTree = "<group>"; };
 		AFBE192E24963B50000DD5BC /* PhotosDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosDetailViewController.swift; sourceTree = "<group>"; };
+		AFBE193024964514000DD5BC /* GitHubUserNameProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUserNameProtocol.swift; sourceTree = "<group>"; };
+		AFBE1932249648DF000DD5BC /* ChangeUsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUsernameViewController.swift; sourceTree = "<group>"; };
+		AFBE1934249676E9000DD5BC /* Variables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variables.swift; sourceTree = "<group>"; };
 		AFE6F9022494067C00405036 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,7 +92,10 @@
 				AF5C0B3C2493C3BC004AEF77 /* UIImageView+Downloaded.swift */,
 				AF5C0B3A2493B92B004AEF77 /* GitHubUser.swift */,
 				AF9C27512494E0ED00CAB652 /* GitHubUserRepoFiles.swift */,
+				AFBE1934249676E9000DD5BC /* Variables.swift */,
 				AF5C0B2C2493AC1E004AEF77 /* Main.storyboard */,
+				AFBE1932249648DF000DD5BC /* ChangeUsernameViewController.swift */,
+				AFBE193024964514000DD5BC /* GitHubUserNameProtocol.swift */,
 				AFBE192E24963B50000DD5BC /* PhotosDetailViewController.swift */,
 				AF9C275B24953BDF00CAB652 /* AVPlayerViewController.swift */,
 				AF9C2755249521F700CAB652 /* MediaViewController.swift */,
@@ -176,14 +185,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF9C27522494E0ED00CAB652 /* GitHubUserRepoFiles.swift in Sources */,
+				AFBE193124964514000DD5BC /* GitHubUserNameProtocol.swift in Sources */,
 				AF9C27542494FBCF00CAB652 /* DocumentsViewController.swift in Sources */,
 				AF5C0B2B2493AC1E004AEF77 /* ViewController.swift in Sources */,
 				AF5C0B3B2493B92B004AEF77 /* GitHubUser.swift in Sources */,
 				AFBE192F24963B50000DD5BC /* PhotosDetailViewController.swift in Sources */,
 				AFE6F9032494067C00405036 /* SignInViewController.swift in Sources */,
 				AF9C275A24952A5C00CAB652 /* DocumentDetailsViewController.swift in Sources */,
+				AFBE1935249676E9000DD5BC /* Variables.swift in Sources */,
 				AF5C0B272493AC1E004AEF77 /* AppDelegate.swift in Sources */,
 				AF5C0B3D2493C3BC004AEF77 /* UIImageView+Downloaded.swift in Sources */,
+				AFBE1933249648DF000DD5BC /* ChangeUsernameViewController.swift in Sources */,
 				AF9C2756249521F700CAB652 /* MediaViewController.swift in Sources */,
 				AF5C0B292493AC1E004AEF77 /* SceneDelegate.swift in Sources */,
 				AF9C275C24953BDF00CAB652 /* AVPlayerViewController.swift in Sources */,

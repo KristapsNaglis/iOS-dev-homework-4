@@ -12,13 +12,14 @@ class SignInViewController: UIViewController {
     
     @IBOutlet weak var inputUsername: UITextField!
     @IBOutlet weak var inputPassword: UITextField!
+    @IBOutlet weak var loginStatus: UILabel!
     
     var testUsername: String!
     var testPassword: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        loginStatus.text = ""
         testUsername = "kristaps"
         testPassword = "gribu-but-ios-devel"
     }
@@ -29,8 +30,7 @@ class SignInViewController: UIViewController {
             self.performSegue(withIdentifier: "ToMainViewModal", sender: self)
         } else {
             print("Login failed")
-            print("But log in anyway for test purpouses")
-            self.performSegue(withIdentifier: "ToMainViewModal", sender: self)
+            loginStatus.text = "LOGIN FAILED"
         }
     }
 }

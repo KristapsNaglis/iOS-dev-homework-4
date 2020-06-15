@@ -9,27 +9,33 @@
 import UIKit
 
 class ViewController: UIViewController {
-
     
+    var gitHubUsername = Variables.gitHubUsername
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var companyLabel: UILabel!
     @IBOutlet weak var bioLabel: UILabel!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        nameLabel.text = "user_name"
-        companyLabel.text = "user_company"
-        bioLabel.text = "user_bio"
+        nameLabel.text = ""
+        companyLabel.text = ""
+        bioLabel.text = ""
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        gitHubUsername = Variables.gitHubUsername
         fetchGithubUserData()
         getDocumentsDirectory()
     }
     
     
     func fetchGithubUserData(){
-        let url = URL(string: "https://api.github.com/users/ioslekcijas")
+        print("GitHub Username: \(Variables.gitHubUsername)")
+        let url = URL(string: "https://api.github.com/users/\(gitHubUsername)")
         var urlRequest = URLRequest(url: url!)
         urlRequest.httpMethod = "GET"
         urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")

@@ -295,7 +295,7 @@
                                 <rect key="frame" x="467" y="691" width="177" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqa-8Y-Skx">
                                 <rect key="frame" x="493" y="756" width="38" height="30"/>
@@ -305,6 +305,13 @@
                                     <action selector="submitLogin:" destination="DNt-Ur-mo5" eventType="touchUpInside" id="0vO-uJ-9qb"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LOGIN FAILED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W60-f6-j7t">
+                                <rect key="frame" x="452" y="537" width="121" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="xJD-iX-tm7"/>
@@ -312,6 +319,7 @@
                     <connections>
                         <outlet property="inputPassword" destination="NNV-XH-0WT" id="IcL-TY-x6T"/>
                         <outlet property="inputUsername" destination="CHW-Ea-yLS" id="kqP-d7-2iM"/>
+                        <outlet property="loginStatus" destination="W60-f6-j7t" id="NxN-IK-oaX"/>
                         <segue destination="Ksc-cr-LsW" kind="modal" identifier="ToMainViewModal" modalPresentationStyle="fullScreen" id="Yrd-WT-YiD"/>
                     </connections>
                 </viewController>
@@ -341,30 +349,47 @@
             </objects>
             <point key="canvasLocation" x="-217" y="1163"/>
         </scene>
-        <!--View Controller-->
+        <!--Change Username View Controller-->
         <scene sceneID="zFK-Mk-IPn">
             <objects>
-                <viewController id="buZ-3b-xPJ" sceneMemberID="viewController">
+                <viewController id="buZ-3b-xPJ" customClass="ChangeUsernameViewController" customModule="MD4" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uDe-32-yia">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Here github repo link going to be changed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mey-4H-mUd">
-                                <rect key="frame" x="351" y="151" width="322" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter new GitHub username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mey-4H-mUd">
+                                <rect key="frame" x="405" y="151" width="215" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nyZ-i3-gDt">
+                                <rect key="frame" x="432" y="196" width="160" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWZ-PN-MgV">
+                                <rect key="frame" x="441" y="252" width="142" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Change GitHub User"/>
+                                <connections>
+                                    <action selector="changeUsername:" destination="buZ-3b-xPJ" eventType="touchUpInside" id="f9G-Ju-yP6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="W2g-tA-cVu"/>
                     </view>
                     <navigationItem key="navigationItem" id="wf9-xt-xLX"/>
+                    <connections>
+                        <outlet property="username" destination="nyZ-i3-gDt" id="Cfk-Pc-1RI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aZf-kg-Ra7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2319" y="137"/>
+            <point key="canvasLocation" x="2318.5546875" y="136.60322108345534"/>
         </scene>
         <!--Me-->
         <scene sceneID="ycQ-lP-iaN">
